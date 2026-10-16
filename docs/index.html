@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>QR Maker</h1>
+    <p class="sub">Paste a link, get a QR code PNG.</p>
+
+    <form id="qr-form">
+      <input id="url-input" type="url" placeholder="https://example.com"
+             required maxlength="2000" autocomplete="off">
+      <button type="submit" id="submit-btn">Generate</button>
+    </form>
+
+    <p id="message" role="alert"></p>
+
+    <div id="result" hidden>
+      <img id="qr-img" alt="Generated QR code" width="256" height="256">
+      <a id="download-link" class="download" download="qr-code.png">Download PNG</a>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
