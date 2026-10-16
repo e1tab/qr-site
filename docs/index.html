@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
   <title>QR Maker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="card">
     <h1>QR Maker</h1>
-    <p class="sub">Paste a link, get a QR code PNG.</p>
+    <p class="sub">Paste a link, get a QR code PNG. Everything runs in your browser.</p>
 
     <form id="qr-form">
       <input id="url-input" type="url" placeholder="https://example.com"
              required maxlength="2000" autocomplete="off">
-      <button type="submit" id="submit-btn">Generate</button>
+      <button type="submit" id="submit-btn" disabled>Generate</button>
     </form>
 
+    <p id="status">Loading Python...</p>
     <p id="message" role="alert"></p>
 
     <div id="result" hidden>
@@ -24,6 +26,8 @@
       <a id="download-link" class="download" download="qr-code.png">Download PNG</a>
     </div>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

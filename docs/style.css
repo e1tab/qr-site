@@ -56,3 +56,4 @@ button:disabled { opacity: 0.6; cursor: wait; }
 #result { margin-top: 1rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
 #result[hidden] { display: none; }
 #qr-img { background: #fff; padding: 12px; border-radius: 12px; }
+#status { margin: 1rem 0 0; color: #94a3b8; min-height: 1.5rem; }
